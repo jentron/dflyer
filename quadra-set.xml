@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Rascal 110 R/C airplane config. This files ties together all the components
+used by FGFS to represent the Rascal 110 (by Sig Mfg) including the flight
+dynamics model, and external 3D model.
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Quadra-copter UAV (R/C)</description>
+  <author>Ron Jensen</author>
+  <aircraft-version>0.0</aircraft-version>
+
+
+  <flight-model>jsb</flight-model>
+  <aero>dflyer</aero>
+  <!--
+  <systems>
+   <autopilot>
+    <path>Aircraft/Malolo1/Systems/110-autopilot.xml</path>
+   </autopilot>
+   <electrical>
+    <path>Aircraft/Malolo1/Systems/electrical.xml</path>
+   </electrical>
+  </systems> -->
+
+  <sound>
+   <path>Aircraft/Generic/generic-sound.xml</path>
+  </sound>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/nmine/Models/quadra.xml</path>
+  </model>
+  
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.15</y-offset-m>
+     <z-offset-m archive="y">0.40</z-offset-m>
+     <pitch-offset-deg>0</pitch-offset-deg>
+   </config>
+  </view>
+
+        <chase-distance-m archive="y" type="double">-7.5</chase-distance-m>
+  <help>
+    <title>Quadra Flier UAV</title>
+    <line>Cruise speed: 60 mph</line>
+    <line>Never-exceed (Vne): 85 mph</line>
+    <line>Best Glide (Vglide): 20 mph</line>
+    <line>Maneuvering (Va): 50 mph</line>
+    <line>Approach speed: 15-25 mph</line>
+    <line>Stall speed (Vs): 10 mph</line>
+  </help>
+
+ </sim>
+
+ <controls>
+  <flight>
+   <aileron-trim>0.05</aileron-trim>   <!-- fixed -->
+   <elevator-trim>0.00</elevator-trim> <!-- controllable -->
+  </flight>
+ </controls>
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <level-gal_us>0.1667</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables> 
+ <payload>
+  <weight>
+   <name type="string">Payload</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">1.0</max-lb>
+  </weight>
+ </payload> 
+
+</PropertyList>

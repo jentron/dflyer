@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>quadra.ac</path>
+ <model>
+  <name>Front Engine</name>
+  <path>Aircraft/nmine/Models/engineF.xml</path>
+  <offsets>
+   <x-m>-0.283</x-m>
+   <y-m> 0.0</y-m>
+   <z-m> 0.0</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+  
+</PropertyList>
