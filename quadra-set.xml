@@ -49,7 +49,7 @@ dynamics model, and external 3D model.
    </config>
   </view>
 
-        <chase-distance-m archive="y" type="double">-7.5</chase-distance-m>
+        <chase-distance-m archive="y" type="double">-5.5</chase-distance-m>
   <help>
     <title>Quadra Flier UAV</title>
     <line>Cruise speed: 60 mph</line>
