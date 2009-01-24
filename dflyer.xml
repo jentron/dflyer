@@ -236,6 +236,72 @@
   </tank>
 
  </propulsion>
+ <flight_control name="FCS: quad-copter">
+  <channel name="Control Input">
+   <summer name="Pitch Command Sum">
+    <input>fcs/elevator-cmd-norm</input>
+    <input>fcs/pitch-trim-cmd-norm</input>
+    <clipto>
+     <min>-1</min>
+     <max>1</max>
+    </clipto>
+   </summer> 
+   <summer name="Roll Command Sum">
+    <input>fcs/aileron-cmd-norm</input>
+    <input>fcs/roll-trim-cmd-norm</input>
+    <clipto>
+     <min>-1</min>
+     <max>1</max>
+    </clipto>
+   </summer>
+   <summer name="Rudder Command Sum">
+    <input>fcs/rudder-cmd-norm</input>
+    <input>fcs/yaw-trim-cmd-norm</input>
+    <clipto>
+     <min> -1 </min>
+     <max>  1 </max>
+    </clipto>
+   </summer>
+  </channel>
+  <channel name="Power">
+   <summer name="Power Fwd">
+    <input>fcs/pitch-command-sum</input>
+    <input>fcs/throttle-cmd-norm</input>
+    <clipto>
+     <min>  0 </min>
+     <max>  1 </max>
+    </clipto>
+    <output>fcs/throttle-pos-norm[0]</output>
+   </summer>
+   <summer name="Power Aft">
+    <input>-fcs/pitch-command-sum</input>
+    <input>fcs/throttle-cmd-norm</input>
+    <clipto>
+     <min>  0 </min>
+     <max>  1 </max>
+    </clipto>
+    <output>fcs/throttle-pos-norm[1]</output>
+   </summer>
+   <summer name="Power Left">
+    <input>-fcs/roll-command-sum</input>
+    <input>fcs/throttle-cmd-norm</input>
+    <clipto>
+     <min>  0 </min>
+     <max>  1 </max>
+    </clipto>
+    <output>fcs/throttle-pos-norm[2]</output>
+   </summer>
+   <summer name="Power Right">
+    <input>fcs/roll-command-sum</input>
+    <input>fcs/throttle-cmd-norm</input>
+    <clipto>
+     <min>  0 </min>
+     <max>  1 </max>
+    </clipto>
+    <output>fcs/throttle-pos-norm[3]</output>
+   </summer>
+  </channel>
+ </flight_control>
 
  <aerodynamics>
   <axis name="LIFT">
