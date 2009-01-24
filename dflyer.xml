@@ -43,7 +43,7 @@
    <ixy unit="KG*M2">  0.0 </ixy>
    <ixz unit="KG*M2">  0.0 </ixz>
    <iyz unit="KG*M2">  0.0 </iyz>
-   <emptywt unit="KG"> 2.000 </emptywt>
+   <emptywt unit="KG"> 0.900 </emptywt>
    <location name="CG" unit="IN">
      <x>  0.0 </x>
      <y>  0.0 </y>
@@ -254,7 +254,7 @@
      <max>1</max>
     </clipto>
    </summer>
-   <summer name="Rudder Command Sum">
+   <summer name="Yaw Command Sum">
     <input>fcs/rudder-cmd-norm</input>
     <input>fcs/yaw-trim-cmd-norm</input>
     <clipto>
@@ -264,42 +264,114 @@
    </summer>
   </channel>
   <channel name="Power">
-   <summer name="Power Fwd">
-    <input>fcs/pitch-command-sum</input>
-    <input>fcs/throttle-cmd-norm</input>
-    <clipto>
-     <min>  0 </min>
-     <max>  1 </max>
-    </clipto>
+   <fcs_function name="Power FWD">
+    <function>
+     <sum>
+      <product>
+       <property>fcs/throttle-cmd-norm</property>
+       <value>0.58</value>
+      </product>
+      <product>
+       <property>fcs/roll-command-sum</property>
+       <value>0.0</value>
+      </product>
+      <product>
+       <property>fcs/pitch-command-sum</property>
+       <value>0.28</value>
+      </product>
+      <product>
+       <property>fcs/yaw-command-sum</property>
+       <value>-0.14</value>
+      </product>
+     </sum>
+     <clipto>
+      <min>0</min>
+      <max>1</max>
+     </clipto>
+    </function>
     <output>fcs/throttle-pos-norm[0]</output>
-   </summer>
-   <summer name="Power Aft">
-    <input>-fcs/pitch-command-sum</input>
-    <input>fcs/throttle-cmd-norm</input>
-    <clipto>
-     <min>  0 </min>
-     <max>  1 </max>
-    </clipto>
+   </fcs_function>
+   <fcs_function name="Power Aft">
+    <function>
+     <sum>
+      <product>
+       <property>fcs/throttle-cmd-norm</property>
+       <value>0.58</value>
+      </product>
+      <product>
+       <property>fcs/roll-command-sum</property>
+       <value>0.0</value>
+      </product>
+      <product>
+       <property>fcs/pitch-command-sum</property>
+       <value>-0.28</value>
+      </product>
+      <product>
+       <property>fcs/yaw-command-sum</property>
+       <value>-0.14</value>
+      </product>
+     </sum>
+     <clipto>
+      <min>0</min>
+      <max>1</max>
+     </clipto>
+    </function>
     <output>fcs/throttle-pos-norm[1]</output>
-   </summer>
-   <summer name="Power Left">
-    <input>-fcs/roll-command-sum</input>
-    <input>fcs/throttle-cmd-norm</input>
-    <clipto>
-     <min>  0 </min>
-     <max>  1 </max>
-    </clipto>
+   </fcs_function>
+   <fcs_function name="Power Left">
+    <function>
+     <sum>
+      <product>
+       <property>fcs/throttle-cmd-norm</property>
+       <value>0.58</value>
+      </product>
+      <product>
+       <property>fcs/roll-command-sum</property>
+       <value>-0.28</value>
+      </product>
+      <product>
+       <property>fcs/pitch-command-sum</property>
+       <value>0.0</value>
+      </product>
+      <product>
+       <property>fcs/yaw-command-sum</property>
+       <value>0.14</value>
+      </product>
+     </sum>
+     <clipto>
+      <min>0</min>
+      <max>1</max>
+     </clipto>
+    </function>
     <output>fcs/throttle-pos-norm[2]</output>
-   </summer>
-   <summer name="Power Right">
-    <input>fcs/roll-command-sum</input>
-    <input>fcs/throttle-cmd-norm</input>
-    <clipto>
-     <min>  0 </min>
-     <max>  1 </max>
-    </clipto>
+   </fcs_function>
+   <fcs_function name="Power Right">
+    <function>
+     <sum>
+      <product>
+       <property>fcs/throttle-cmd-norm</property>
+       <value>0.58</value>
+      </product>
+      <product>
+       <property>fcs/roll-command-sum</property>
+       <value>0.28</value>
+      </product>
+      <product>
+       <property>fcs/pitch-command-sum</property>
+       <value>0.0</value>
+      </product>
+      <product>
+       <property>fcs/yaw-command-sum</property>
+       <value>0.14</value>
+      </product>
+     </sum>
+     <clipto>
+      <min>0</min>
+      <max>1</max>
+     </clipto>
+    </function>
     <output>fcs/throttle-pos-norm[3]</output>
-   </summer>
+   </fcs_function>
   </channel>
  </flight_control>
 
