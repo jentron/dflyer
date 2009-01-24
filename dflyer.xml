@@ -37,9 +37,9 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">  7.5 </ixx>
-   <iyy unit="KG*M2"> 74.0 </iyy>
-   <izz unit="KG*M2"> 74.0 </izz>
+   <ixx unit="KG*M2">  0.75 </ixx>
+   <iyy unit="KG*M2"> 7.40 </iyy>
+   <izz unit="KG*M2"> 7.40 </izz>
    <ixy unit="KG*M2">  0.0 </ixy>
    <ixz unit="KG*M2">  0.0 </ixz>
    <iyz unit="KG*M2">  0.0 </iyz>
@@ -69,8 +69,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       200 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  20 </damping_coeff>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
   </contact>
 
   <contact type="STRUCTURE" name="rearbase">
@@ -81,8 +82,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       200 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  20 </damping_coeff>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
   </contact>
 
   <contact type="STRUCTURE" name="leftbase">
@@ -93,8 +95,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       200 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  20 </damping_coeff>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
   </contact>
 
   <contact type="STRUCTURE" name="rightbase">
@@ -105,8 +108,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       200 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  20 </damping_coeff>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
   </contact>
 
  </ground_reactions>
@@ -137,7 +141,7 @@
      <yaw>    0.00 </yaw>
     </orient>
     <sense> 1 </sense>
-    <p_factor> 1 </p_factor>
+    <p_factor> 10 </p_factor>
    </thruster>
   </engine>
 
@@ -165,7 +169,7 @@
      <yaw>    0.00 </yaw>
     </orient>
     <sense> 1 </sense>
-    <p_factor> 1 </p_factor>
+    <p_factor> 10 </p_factor>
    </thruster>
   </engine>
 
@@ -193,7 +197,7 @@
      <yaw>    0.00 </yaw>
     </orient>
     <sense> -1 </sense>
-    <p_factor> 1 </p_factor>
+    <p_factor> 10 </p_factor>
    </thruster>
   </engine>
 
@@ -221,7 +225,7 @@
      <yaw>    0.00 </yaw>
     </orient>
     <sense> -1 </sense>
-    <p_factor> 1 </p_factor>
+    <p_factor> 10 </p_factor>
    </thruster>
   </engine>
 
@@ -268,7 +272,7 @@
     <function>
      <sum>
       <product>
-       <property>fcs/throttle-cmd-norm</property>
+       <property>fcs/throttle-cmd-norm[0]</property>
        <value>0.58</value>
       </product>
       <product>
@@ -295,7 +299,7 @@
     <function>
      <sum>
       <product>
-       <property>fcs/throttle-cmd-norm</property>
+       <property>fcs/throttle-cmd-norm[1]</property>
        <value>0.58</value>
       </product>
       <product>
@@ -322,7 +326,7 @@
     <function>
      <sum>
       <product>
-       <property>fcs/throttle-cmd-norm</property>
+       <property>fcs/throttle-cmd-norm[2]</property>
        <value>0.58</value>
       </product>
       <product>
@@ -349,7 +353,7 @@
     <function>
      <sum>
       <product>
-       <property>fcs/throttle-cmd-norm</property>
+       <property>fcs/throttle-cmd-norm[3]</property>
        <value>0.58</value>
       </product>
       <product>
