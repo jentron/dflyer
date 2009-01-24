@@ -5,7 +5,7 @@
  <path>engineCW.ac</path>
 
  <animation>
-  <type>rotate</type>
+  <type>spin</type>
   <object-name>prop2</object-name>
   <property>engines/engine[1]/rpm</property>
   <factor>1</factor>   
@@ -15,9 +15,9 @@
    <z-m>0</z-m>
   </center>
   <axis>
-   <x>1</x>
+   <x>0</x>
    <y>0</y>
-   <z>0</z>
+   <z>1</z>
   </axis>
  </animation>
 
