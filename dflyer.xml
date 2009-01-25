@@ -37,9 +37,9 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">  0.75 </ixx>
-   <iyy unit="KG*M2"> 7.40 </iyy>
-   <izz unit="KG*M2"> 7.40 </izz>
+   <ixx unit="KG*M2">  5.0 </ixx>
+   <iyy unit="KG*M2">  5.0 </iyy>
+   <izz unit="KG*M2"> 10.0 </izz>
    <ixy unit="KG*M2">  0.0 </ixy>
    <ixz unit="KG*M2">  0.0 </ixz>
    <iyz unit="KG*M2">  0.0 </iyz>
@@ -90,7 +90,7 @@
   <contact type="STRUCTURE" name="leftbase">
    <location unit="M">
     <x>   0.00 </x>
-    <y>  -0.283 </y>
+    <y>   0.283 </y>
     <z>  -0.033</z>
    </location>
    <static_friction>  0.80 </static_friction>
@@ -103,7 +103,7 @@
   <contact type="STRUCTURE" name="rightbase">
    <location unit="M">
     <x>   0.00 </x>
-    <y>   0.283 </y>
+    <y>  -0.283 </y>
     <z>  -0.033</z>
    </location>
    <static_friction>  0.80 </static_friction>
@@ -119,7 +119,7 @@
  <propulsion>
   <engine file="eng_150w" name="front">
    <location unit="M">
-    <x>   0.283 </x>
+    <x>  -0.283 </x>
     <y>   0.00  </y>
     <z>   0.00  </z>
    </location>
@@ -131,7 +131,7 @@
    <feed>0</feed>
    <thruster file="18x8">
     <location unit="M">
-     <x>   0.283 </x>
+     <x>  -0.283 </x>
      <y>   0.00  </y>
      <z>   0.025 </z>
     </location>
@@ -147,7 +147,7 @@
 
   <engine file="eng_150w" name="rear">
    <location unit="M">
-    <x>  -0.283 </x>
+    <x>   0.283 </x>
     <y>   0.000 </y>
     <z>   0.000 </z>
    </location>
@@ -159,7 +159,7 @@
    <feed>0</feed>
    <thruster file="18x8">
     <location unit="M">
-     <x>  -0.283 </x>
+     <x>   0.283 </x>
      <y>   0.000 </y>
      <z>   0.025 </z>
     </location>
@@ -281,7 +281,7 @@
       </product>
       <product>
        <property>fcs/pitch-command-sum</property>
-       <value>0.28</value>
+       <value>-0.28</value>
       </product>
       <product>
        <property>fcs/yaw-command-sum</property>
@@ -308,7 +308,7 @@
       </product>
       <product>
        <property>fcs/pitch-command-sum</property>
-       <value>-0.28</value>
+       <value>0.28</value>
       </product>
       <product>
        <property>fcs/yaw-command-sum</property>

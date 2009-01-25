@@ -13,7 +13,7 @@ dynamics model, and external 3D model.
   <description>Quadra-copter UAV (R/C)</description>
   <author>Ron Jensen</author>
   <aircraft-version>0.0</aircraft-version>
-
+  <status>experimental</status> 
 
   <flight-model>jsb</flight-model>
   <aero>dflyer</aero>
@@ -83,5 +83,24 @@ dynamics model, and external 3D model.
    <max-lb type="double">1.0</max-lb>
   </weight>
  </payload> 
+ <nasal>
+  <quadra>
+   <script>
+     setlistener("/sim/signals/fdm-initialized", func {
+         var left  = screen.display.new(20, 10);
+         left.add("/fdm/jsbsim/fcs/throttle-pos-norm[0]");
+         left.add("/fdm/jsbsim/fcs/throttle-pos-norm[1]");
+         left.add("/fdm/jsbsim/fcs/throttle-pos-norm[2]");
+         left.add("/fdm/jsbsim/fcs/throttle-pos-norm[3]");
+         left.add("/orientation/pitch-deg");
+         
+         var right = screen.display.new(-250, 20);
+         right.add("/fdm/jsbsim/moments/l-prop-lbsft");
+         right.add("/fdm/jsbsim/moments/m-prop-lbsft");
+         right.add("/fdm/jsbsim/moments/n-prop-lbsft");
 
+     });
+   </script>
+  </quadra>
+ </nasal> 
 </PropertyList>
