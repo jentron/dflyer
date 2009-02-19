@@ -80,7 +80,7 @@ dynamics model, and external 3D model.
    <name type="string">Payload</name>
    <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
    <min-lb type="double">0.0</min-lb>
-   <max-lb type="double">1.0</max-lb>
+   <max-lb type="double">5.0</max-lb>
   </weight>
  </payload> 
  <nasal>

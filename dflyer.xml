@@ -133,7 +133,7 @@
     <location unit="M">
      <x>  -0.283 </x>
      <y>   0.00  </y>
-     <z>   0.025 </z>
+     <z>   0.125 </z>
     </location>
     <orient unit="DEG">
      <pitch> 90.00 </pitch>
@@ -161,7 +161,7 @@
     <location unit="M">
      <x>   0.283 </x>
      <y>   0.000 </y>
-     <z>   0.025 </z>
+     <z>   0.125 </z>
     </location>
     <orient unit="DEG">
      <pitch> 90.00 </pitch>
@@ -189,7 +189,7 @@
     <location unit="M">
      <x>   0.00 </x>
      <y>   0.283 </y>
-     <z>   0.025 </z>
+     <z>   0.125 </z>
     </location>
     <orient unit="DEG">
      <pitch> 90.00 </pitch>
@@ -217,7 +217,7 @@
     <location unit="M">
      <x>   0.000 </x>
      <y>  -0.283 </y>
-     <z>   0.025 </z>
+     <z>   0.125 </z>
     </location>
     <orient unit="DEG">
      <pitch> 90.00 </pitch>
@@ -288,11 +288,11 @@
        <value>-0.14</value>
       </product>
      </sum>
-     <clipto>
-      <min>0</min>
-      <max>1</max>
-     </clipto>
     </function>
+    <clipto>
+     <min>0</min>
+     <max>1</max>
+    </clipto>
     <output>fcs/throttle-pos-norm[0]</output>
    </fcs_function>
    <fcs_function name="Power Aft">
@@ -315,11 +315,11 @@
        <value>-0.14</value>
       </product>
      </sum>
-     <clipto>
-      <min>0</min>
-      <max>1</max>
-     </clipto>
     </function>
+    <clipto>
+     <min>0</min>
+     <max>1</max>
+    </clipto>
     <output>fcs/throttle-pos-norm[1]</output>
    </fcs_function>
    <fcs_function name="Power Left">
@@ -342,11 +342,11 @@
        <value>0.14</value>
       </product>
      </sum>
-     <clipto>
-      <min>0</min>
-      <max>1</max>
-     </clipto>
     </function>
+    <clipto>
+     <min>0</min>
+     <max>1</max>
+    </clipto>
     <output>fcs/throttle-pos-norm[2]</output>
    </fcs_function>
    <fcs_function name="Power Right">
@@ -369,11 +369,11 @@
        <value>0.14</value>
       </product>
      </sum>
-     <clipto>
-      <min>0</min>
-      <max>1</max>
-     </clipto>
     </function>
+    <clipto>
+     <min>0</min>
+     <max>1</max>
+    </clipto>
     <output>fcs/throttle-pos-norm[3]</output>
    </fcs_function>
   </channel>
