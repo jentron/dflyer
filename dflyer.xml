@@ -69,9 +69,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <spring_coeff unit="N/M">       180 </spring_coeff>
    <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
+   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
   </contact>
 
   <contact type="STRUCTURE" name="rearbase">
@@ -82,9 +82,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <spring_coeff unit="N/M">       180 </spring_coeff>
    <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
+   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
   </contact>
 
   <contact type="STRUCTURE" name="leftbase">
@@ -95,9 +95,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <spring_coeff unit="N/M">       180 </spring_coeff>
    <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
+   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
   </contact>
 
   <contact type="STRUCTURE" name="rightbase">
@@ -108,16 +108,16 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <spring_coeff unit="N/M">       180 </spring_coeff>
    <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  1900 </damping_coeff_rebound>
+   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
   </contact>
 
  </ground_reactions>
 
 <!-- the front and rear motors spin clockwise, and the left and right motors spin counter-clockwise. -->
  <propulsion>
-  <engine file="eng_150w" name="front">
+  <engine file="electric_150w" name="front">
    <location unit="M">
     <x>  -0.283 </x>
     <y>   0.00  </y>
@@ -129,7 +129,7 @@
     <yaw>    0.00 </yaw>
    </orient>
    <feed>0</feed>
-   <thruster file="18x8">
+   <thruster file="prop18x8">
     <location unit="M">
      <x>  -0.283 </x>
      <y>   0.00  </y>
@@ -145,7 +145,7 @@
    </thruster>
   </engine>
 
-  <engine file="eng_150w" name="rear">
+  <engine file="electric_150w" name="rear">
    <location unit="M">
     <x>   0.283 </x>
     <y>   0.000 </y>
@@ -157,7 +157,7 @@
     <yaw>    0.00 </yaw>
    </orient>
    <feed>0</feed>
-   <thruster file="18x8">
+   <thruster file="prop18x8">
     <location unit="M">
      <x>   0.283 </x>
      <y>   0.000 </y>
@@ -173,7 +173,7 @@
    </thruster>
   </engine>
 
-  <engine file="eng_150w" name="left">
+  <engine file="electric_150w" name="left">
    <location unit="M">
     <x>   0.00 </x>
     <y>   0.283 </y>
@@ -185,7 +185,7 @@
     <yaw>    0.00 </yaw>
    </orient>
    <feed>0</feed>
-   <thruster file="18x8">
+   <thruster file="prop18x8">
     <location unit="M">
      <x>   0.00 </x>
      <y>   0.283 </y>
@@ -201,7 +201,7 @@
    </thruster>
   </engine>
 
-  <engine file="eng_150w" name="right">
+  <engine file="electric_150w" name="right">
    <location unit="M">
     <x>   0.000 </x>
     <y>  -0.283 </y>
@@ -213,7 +213,7 @@
     <yaw>    0.00 </yaw>
    </orient>
    <feed>0</feed>
-   <thruster file="18x8">
+   <thruster file="prop18x8">
     <location unit="M">
      <x>   0.000 </x>
      <y>  -0.283 </y>
