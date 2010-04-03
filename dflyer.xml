@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
-<fdm_config name="DA20-A1" version="2.0" release="ALPHA"
+<fdm_config name="dflyer" version="0.2" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
  <fileheader>
   <author> Ron Jensen </author>
   <filecreationdate> 2009-01-23 </filecreationdate>
-  <version>0.01 </version>
+  <version>0.2 </version>
   <description> Models a four rotor UAV similar to the Draganflyer XPro. </description>
  </fileheader>
 
@@ -37,12 +37,9 @@
  </metrics>
 
  <mass_balance>
-   <ixx unit="KG*M2">  5.0 </ixx>
-   <iyy unit="KG*M2">  5.0 </iyy>
-   <izz unit="KG*M2"> 10.0 </izz>
-   <ixy unit="KG*M2">  0.0 </ixy>
-   <ixz unit="KG*M2">  0.0 </ixz>
-   <iyz unit="KG*M2">  0.0 </iyz>
+   <ixx unit="KG*M2"> 10.0 </ixx>
+   <iyy unit="KG*M2"> 10.0 </iyy>
+   <izz unit="KG*M2">  5.0 </izz>
    <emptywt unit="KG"> 0.900 </emptywt>
    <location name="CG" unit="IN">
      <x>  0.0 </x>
@@ -50,7 +47,7 @@
      <z>  0.0 </z>
    </location>
    <pointmass name="Payload">
-     <weight unit="KG"> 0 </weight>
+     <weight unit="KG"> 1.1 </weight>
      <location unit="IN">
        <x>  0.0 </x>
        <y>  0.0 </y>
@@ -61,7 +58,7 @@
 
  <ground_reactions>
 
-  <contact type="STRUCTURE" name="frontbase">
+  <contact type="BOGEY" name="frontbase">
    <location unit="M">
     <x>  -0.283 </x>
     <y>   0.00 </y>
@@ -69,12 +66,12 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       180 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">   60 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  60 </damping_coeff_rebound>
   </contact>
 
-  <contact type="STRUCTURE" name="rearbase">
+  <contact type="BOGEY" name="rearbase">
    <location unit="M">
     <x>   0.283 </x>
     <y>   0.00 </y>
@@ -82,12 +79,12 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       180 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">   60 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  60 </damping_coeff_rebound>
   </contact>
 
-  <contact type="STRUCTURE" name="leftbase">
+  <contact type="BOGEY" name="leftbase">
    <location unit="M">
     <x>   0.00 </x>
     <y>   0.283 </y>
@@ -95,12 +92,12 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       180 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">   60 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  60 </damping_coeff_rebound>
   </contact>
 
-  <contact type="STRUCTURE" name="rightbase">
+  <contact type="BOGEY" name="rightbase">
    <location unit="M">
     <x>   0.00 </x>
     <y>  -0.283 </y>
@@ -108,9 +105,9 @@
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
-   <spring_coeff unit="N/M">       180 </spring_coeff>
-   <damping_coeff unit="N/M/SEC">  0 </damping_coeff>
-   <damping_coeff_rebound unit="N/M/SEC">  900 </damping_coeff_rebound>
+   <spring_coeff unit="N/M">       1800 </spring_coeff>
+   <damping_coeff unit="N/M/SEC">   60 </damping_coeff>
+   <damping_coeff_rebound unit="N/M/SEC">  60 </damping_coeff_rebound>
   </contact>
 
  </ground_reactions>
