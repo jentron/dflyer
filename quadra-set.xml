@@ -36,7 +36,7 @@ dynamics model, and external 3D model.
   </panel>
 
   <model>
-   <path archive="y">Aircraft/nmine/Models/quadra.xml</path>
+   <path archive="y">Aircraft/dflyer/Models/quadra.xml</path>
   </model>
   
   <view>

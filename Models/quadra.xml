@@ -5,7 +5,7 @@
  <path>quadra.ac</path>
  <model>
   <name>Front Engine</name>
-  <path>Aircraft/nmine/Models/engineF.xml</path>
+  <path>Aircraft/dflyer/Models/engineF.xml</path>
   <offsets>
    <x-m>-0.283</x-m>
    <y-m> 0.0</y-m>
@@ -15,7 +15,7 @@
  </model>
  <model>
   <name>Rear Engine</name>
-  <path>Aircraft/nmine/Models/engineB.xml</path>
+  <path>Aircraft/dflyer/Models/engineB.xml</path>
   <offsets>
    <x-m> 0.283</x-m>
    <y-m> 0.0</y-m>
@@ -25,7 +25,7 @@
  </model>
  <model>
   <name>Left Engine</name>
-  <path>Aircraft/nmine/Models/engineL.xml</path>
+  <path>Aircraft/dflyer/Models/engineL.xml</path>
   <offsets>
    <x-m> 0.0</x-m>
    <y-m>-0.283</y-m>
@@ -35,7 +35,7 @@
  </model>
  <model>
   <name>Right Engine</name>
-  <path>Aircraft/nmine/Models/engineR.xml</path>
+  <path>Aircraft/dflyer/Models/engineR.xml</path>
   <offsets>
    <x-m> 0.0</x-m>
    <y-m> 0.283</y-m>
