@@ -17,6 +17,7 @@ dynamics model, and external 3D model.
 
   <flight-model>jsb</flight-model>
   <aero>dflyer</aero>
+<model-hz>120</model-hz>
   <!--
   <systems>
    <autopilot>
