@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<output name="quadra.csv" type="CSV" rate="10">
+ <property>fcs/throttle-cmd-norm[0]</property>
+<!-- <property>fcs/throttle-cmd-norm[1]</property>
+ <property>fcs/throttle-cmd-norm[2]</property>
+ <property>fcs/throttle-cmd-norm[3]</property> -->
+ <property>propulsion/engine/advance-ratio</property>
+ <property>velocities/vc-kts</property>
+ <property>aero/alpha-deg</property>
+ <property>aero/beta-deg</property>
+ <property>attitude/phi-rad</property>
+ <property>attitude/theta-rad</property>
+ <property>attitude/psi-rad</property>
+ <property>fcs/pitch-command-sum</property>
+ <property>fcs/roll-command-sum</property>
+ <property>fcs/yaw-command-sum</property>
+ <property>fcs/power-fwd</property>
+ <property>fcs/power-aft</property>
+ <property>fcs/power-left</property>
+ <property>fcs/power-right</property>
+ <property>position/h-agl-ft</property>
+ <property>velocities/u-aero-fps</property>
+ <property>velocities/v-aero-fps</property>
+ <property>velocities/w-aero-fps</property>
+ <property>forces/fbx-prop-lbs</property>
+ <property>forces/fby-prop-lbs</property>
+ <property>forces/fbz-prop-lbs</property>
+ <property>moments/l-prop-lbsft</property>
+ <property>moments/m-prop-lbsft</property>
+ <property>moments/n-prop-lbsft</property>
+</output>

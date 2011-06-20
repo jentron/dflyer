@@ -17,7 +17,7 @@
   <minpitch> 30 </minpitch>
   <maxpitch> 30 </maxpitch>
   <gearratio> 1 </gearratio>
-  <ct_factor> 4.0 </ct_factor>
+  <ct_factor> 2.0 </ct_factor>
   <cp_factor> 1.0 </cp_factor>
 
   <table name="C_THRUST" type="internal">
